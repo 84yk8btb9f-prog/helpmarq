@@ -359,6 +359,123 @@
                 padding: 60px 30px;
             }
         }
+        /* Override MailerLite form styles to match website theme */
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
+    padding: 40px 40px 30px 40px !important;
+}
+
+/* Input field styling */
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #e8eaf6 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+}
+
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(102, 126, 234, 0.5) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::placeholder {
+    color: #b0b8d4 !important;
+    opacity: 0.7 !important;
+}
+
+/* Button styling */
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button,
+#mlb2-35440785 .ml-mobileButton-horizontal button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 14px 32px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover,
+#mlb2-35440785 .ml-mobileButton-horizontal button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Success message styling */
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+    padding: 40px !important;
+}
+
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+    color: #ffffff !important;
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+}
+
+#mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+    color: #b0b8d4 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+/* Horizontal form layout adjustments */
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: flex-start !important;
+}
+
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
+    flex: 1 !important;
+}
+
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal {
+    width: auto !important;
+    flex-shrink: 0 !important;
+}
+
+/* Remove the dashed border placeholder */
+.waitlist-form-placeholder {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 40px auto 0 !important;
+}
+
+.placeholder-text,
+.placeholder-instruction {
+    display: none !important;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 400px) {
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
+        padding: 30px 20px 20px 20px !important;
+    }
+    
+    .ml-form-formContent.horozintalForm .ml-form-horizontalRow {
+        flex-direction: column !important;
+    }
+    
+    .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal,
+    .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal {
+        width: 100% !important;
+    }
+}
     </style>
 </head>
 <body>
