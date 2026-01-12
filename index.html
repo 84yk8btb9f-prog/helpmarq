@@ -58,7 +58,7 @@
     height: 50px;
     width: auto;
 }
-        }
+        
 
         .logo-text {
             font-size: 24px;
@@ -510,52 +510,52 @@
   footer {
     padding: 40px 0 30px;
   }
-}
-          /* MOBILE FIDELITY OVERRIDE - FORCE VERTICAL STACK */
+}/* FINAL MOBILE STACKING FIX */
 @media only screen and (max-width: 480px) {
-    /* 1. Force the main wrapper to stop being 400px */
-    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper.embedDefault, 
-    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
-        width: 100% !important;
-        max-width: 100vw !important;
-        margin: 0 auto !important;
-    }
-
-    /* 2. Break the 70%/30% horizontal split */
-    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal,
-    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal {
+    /* Force the entire form container to match screen width */
+    #mlb2-35440785.ml-form-embedContainer,
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper.embedForm,
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper.embedDefault {
         width: 100% !important;
         max-width: 100% !important;
-        float: none !important;
-        padding-right: 0 !important;
-        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* 3. Ensure the input field has breathing room */
-    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .horizontal-fields {
-        padding-right: 0 !important;
-        margin-bottom: 10px !important;
+    /* Force the horizontal row to become a vertical column */
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm .ml-form-horizontalRow {
+        display: flex !important;
+        flex-direction: column !important;
         width: 100% !important;
+        float: none !important;
     }
 
-    /* 4. Force the button to stay within bounds and be full-width */
+    /* Make the input container full width */
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Make the button container full width and fix alignment */
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Ensure the button button itself fills the container */
     #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
         width: 100% !important;
-        display: block !important;
-    }
-
-    /* 5. Prevent the container padding from pushing content out */
-    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
-        padding: 15px !important;
         box-sizing: border-box !important;
     }
 
-    /* 6. Hide the secondary mobile button to avoid duplicates if MailerLite triggers it */
-    .ml-mobileButton-horizontal {
-        display: none !important;
+    /* Remove the 'horizontal-fields' class padding which might shift things right */
+    #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .horizontal-fields {
+        padding: 0 !important;
+        width: 100% !important;
     }
-}
-}
+}}
     </style>
 </head>
 <body>
@@ -676,7 +676,7 @@
     -webkit-transform: scale(1);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
-    height: ;
+    height: 0;
     }
 
     .sr-only {
@@ -1151,7 +1151,7 @@
         text-align: left;
         margin-bottom: 0;
         position: relative;
-        vertical-align: top;
+        display: block;
       }
       #mlb2-35440785.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
         font-weight: normal;
